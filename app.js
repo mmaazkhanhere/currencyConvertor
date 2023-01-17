@@ -102,6 +102,44 @@ async function currencyChanging() {
             console.log(`${amount.amount} GBP in EUR is: ${amountConverted}`);
         }
     }
+    else if (CurrencySelector.CurrencySelector == 'Riyal (SAR)') {
+        if (CurrencySelector.CurrencySelector == 'Riyal (SAR)' && CurrencyChanger.CurrencyChanger == 'US Dollar (USD)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 0.27;
+            console.log(`${amount.amount} SAR in USD is: ${amountConverted}`);
+        }
+        else if (CurrencySelector.CurrencySelector == 'Riyal (SAR)' && CurrencyChanger.CurrencyChanger == 'Pound (GBP)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 0.22;
+            console.log(`${amount.amount} SAR in GBP is: ${amountConverted}`);
+        }
+        else if (CurrencySelector.CurrencySelector == 'Riyal (SAR)' && CurrencyChanger.CurrencyChanger == 'Riyal (SAR)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 1.0;
+            console.log(`${amount.amount} in SAR is: ${amountConverted}`);
+        }
+        else if (CurrencySelector.CurrencySelector == 'Riyal (SAR)' && CurrencyChanger.CurrencyChanger == 'Euro (EUR)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 0.25;
+            console.log(`${amount.amount} SAR in EUR is: ${amountConverted}`);
+        }
+    }
 }
 await display();
 currencyChanging();
