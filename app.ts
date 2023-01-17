@@ -6,7 +6,7 @@ import chalkAnimation from "chalk-animation"
 
 function turnOff(){ //function for time the animation will be on
     return new Promise((resolve)=>{
-        setTimeout(resolve,2500)
+        setTimeout(resolve,2500);
     })
 }
 
@@ -45,10 +45,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
                 
                 let amountConverted=amount.amount*1; //amount is converted
-                console.log(`${amount.amount} in USD is: ${amountConverted}`) //result of currency conversion operation displayed
+                console.log(chalk.bgBlue(`${amount.amount} in USD is: ${amountConverted}`)); //result of currency conversion operation displayed
             }
 
             else if(CurrencySelector.CurrencySelector=='US Dollar (USD)'&& CurrencyChanger.CurrencyChanger=='Pound (GBP)'){
@@ -58,10 +58,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
                 
                 let amountConverted=amount.amount*0.82; //currency conversion
-                console.log(`${amount.amount} USD in GBP is: ${amountConverted}`)//result of currency conversion
+                console.log(chalk.bgBlue(`${amount.amount} USD in GBP is: ${amountConverted}`));//result of currency conversion
             }
             else if(CurrencySelector.CurrencySelector=='US Dollar (USD)'&& CurrencyChanger.CurrencyChanger=='Riyal (SAR)'){
                 // will run if user want to convert usd into saudi riyal
@@ -70,10 +70,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
                 
                 let amountConverted=amount.amount*3.76; //currency conversion
-                console.log(`${amount.amount} USD in SAR is: ${amountConverted}`) //currency conversion result displayed
+                console.log(chalk.bgBlue(`${amount.amount} USD in SAR is: ${amountConverted}`)); //currency conversion result displayed
             }
             else if(CurrencySelector.CurrencySelector=='US Dollar (USD)'&& CurrencyChanger.CurrencyChanger=='Euro (EUR)'){
                 // will run if the user want to convert usd to euro
@@ -82,10 +82,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
                 
                 let amountConverted=amount.amount*0.92; //currency conversion
-                console.log(`${amount.amount} USD in EUR is: ${amountConverted}`)
+                console.log(chalk.bgBlue(`${amount.amount} USD in EUR is: ${amountConverted}`));
             }
         } //usd conversion ends here
 
@@ -99,10 +99,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
                 
                 let amountConverted=amount.amount*1.23; //currency conversion
-                console.log(`${amount.amount} GBP in USD is: ${amountConverted}`)
+                console.log(chalk.bgGreen(`${amount.amount} GBP in USD is: ${amountConverted}`));
             }
 
             else if(CurrencySelector.CurrencySelector=='Pound (GBP)' && CurrencyChanger.CurrencyChanger=='Pound (GBP)'){
@@ -112,10 +112,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*1; //currency conversion
-                console.log(`${amount.amount} GBP in GBP is: ${amountConverted}`)
+                console.log(chalk.bgGreen(`${amount.amount} GBP in GBP is: ${amountConverted}`));
             }
 
             else if(CurrencySelector.CurrencySelector=='Pound (GBP)' && CurrencyChanger.CurrencyChanger=='Riyal (SAR)'){
@@ -125,10 +125,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*4.60; //currency conversion
-                console.log(`${amount.amount} GBP in SAR is: ${amountConverted}`)
+                console.log(chalk.bgGreen(`${amount.amount} GBP in SAR is: ${amountConverted}`));
             }
 
             else if(CurrencySelector.CurrencySelector=='Pound (GBP)' && CurrencyChanger.CurrencyChanger=='Euro (EUR)'){
@@ -138,10 +138,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*1.13; //currency conversion
-                console.log(`${amount.amount} GBP in EUR is: ${amountConverted}`)
+                console.log(chalk.bgGreen(`${amount.amount} GBP in EUR is: ${amountConverted}`));
             }
         } //end of pound conversion to other other currencies
 
@@ -155,10 +155,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*0.27;//currency conversion
-                console.log(`${amount.amount} SAR in USD is: ${amountConverted}`)
+                console.log(chalk.bgGray(`${amount.amount} SAR in USD is: ${amountConverted}`))
             }
 
             else if(CurrencySelector.CurrencySelector=='Riyal (SAR)' && CurrencyChanger.CurrencyChanger=='Pound (GBP)'){
@@ -168,10 +168,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*0.22; //currency conversion
-                console.log(`${amount.amount} SAR in GBP is: ${amountConverted}`)
+                console.log(chalk.bgGray(`${amount.amount} SAR in GBP is: ${amountConverted}`))
             }
 
             else if(CurrencySelector.CurrencySelector=='Riyal (SAR)' && CurrencyChanger.CurrencyChanger=='Riyal (SAR)'){
@@ -181,10 +181,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*1.0;//currency conversion
-                console.log(`${amount.amount} in SAR is: ${amountConverted}`)
+                console.log(chalk.bgGray(`${amount.amount} in SAR is: ${amountConverted}`));
             }
             else if(CurrencySelector.CurrencySelector=='Riyal (SAR)' && CurrencyChanger.CurrencyChanger=='Euro (EUR)'){
                 //will run if user want to convert riyal to euro
@@ -193,10 +193,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*0.25; //currency conversion
-                console.log(`${amount.amount} SAR in EUR is: ${amountConverted}`)
+                console.log(chalk.bgGray(`${amount.amount} SAR in EUR is: ${amountConverted}`));
             }
         } //end of riyal conversion
 
@@ -210,10 +210,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
                 
                 let amountConverted=amount.amount*1.08; //currency conversion
-                console.log(`${amount.amount} EUR in USD is: ${amountConverted}`)
+                console.log(chalk.bgCyan(`${amount.amount} EUR in USD is: ${amountConverted}`));
             }
 
             else if(CurrencySelector.CurrencySelector=='Euro (EUR)' && CurrencyChanger.CurrencyChanger=='Pound (GBP)'){
@@ -223,10 +223,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
                 
                 let amountConverted=amount.amount*0.88; //currency conversion
-                console.log(`${amount.amount} EUR in GBP is: ${amountConverted}`)
+                console.log(chalk.bgCyan(`${amount.amount} EUR in GBP is: ${amountConverted}`));
             }
 
             else if(CurrencySelector.CurrencySelector=='Euro (EUR)' && CurrencyChanger.CurrencyChanger=='Riyal (SAR)'){
@@ -236,10 +236,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*4.06; //currency conversion
-                console.log(`${amount.amount} EUR in SAR is: ${amountConverted}`)
+                console.log(chalk.bgCyan(`${amount.amount} EUR in SAR is: ${amountConverted}`));
             }
 
             else if(CurrencySelector.CurrencySelector=='Euro (EUR)' && CurrencyChanger.CurrencyChanger=='Euro (EUR)'){
@@ -249,10 +249,10 @@ async function currencyChanging(){ //main function of currency changing
                     name:'amount',
                     type:'input',
                     message:'Enter amount to convert: '
-                }])
+                }]);
 
                 let amountConverted=amount.amount*1;//currency conversion
-                console.log(`${amount.amount} in EUR is: ${amountConverted}`)
+                console.log(chalk.bgCyan(`${amount.amount} in EUR is: ${amountConverted}`))
             }
         } //end of euro conversion to other currencies
 
@@ -262,9 +262,9 @@ async function currencyChanging(){ //main function of currency changing
             message:'Do you want to do it again?',
             choices:['Yes','No']
         }])
-    }while(doAgain.doAgain=='Yes') //continue until user select 'Yes'
+    }while(doAgain.doAgain=='Yes'); //continue until user select 'Yes'
 }
 
 
 await display();
-currencyChanging()
+currencyChanging();
