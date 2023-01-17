@@ -43,7 +43,7 @@ async function currencyChanging() {
                     message: 'Enter amount to convert: '
                 }]);
             let amountConverted = amount.amount * 0.82;
-            console.log(`${amount.amount} in GBP is: ${amountConverted}`);
+            console.log(`${amount.amount} USD in GBP is: ${amountConverted}`);
         }
         else if (CurrencySelector.CurrencySelector == 'US Dollar (USD)' && CurrencyChanger.CurrencyChanger == 'Riyal (SAR)') {
             let amount = await inquirer.prompt([{
@@ -52,7 +52,7 @@ async function currencyChanging() {
                     message: 'Enter amount to convert: '
                 }]);
             let amountConverted = amount.amount * 3.76;
-            console.log(`${amount.amount} in SAR is: ${amountConverted}`);
+            console.log(`${amount.amount} USD in SAR is: ${amountConverted}`);
         }
         else if (CurrencySelector.CurrencySelector == 'US Dollar (USD)' && CurrencyChanger.CurrencyChanger == 'Euro (EUR)') {
             let amount = await inquirer.prompt([{
@@ -61,7 +61,45 @@ async function currencyChanging() {
                     message: 'Enter amount to convert: '
                 }]);
             let amountConverted = amount.amount * 0.92;
-            console.log(`${amount.amount} in SAR is: ${amountConverted}`);
+            console.log(`${amount.amount} USD in EUR is: ${amountConverted}`);
+        }
+    }
+    else if (CurrencySelector == 'Pound (GBP)') {
+        if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'US Dollar (USD)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 1.23;
+            console.log(`${amount.amount} GBP in USD is: ${amountConverted}`);
+        }
+        else if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'Pound (GBP)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 1;
+            console.log(`${amount.amount} GBP in GBP is: ${amountConverted}`);
+        }
+        else if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'Riyal (SAR)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 4.60;
+            console.log(`${amount.amount} GBP in SAR is: ${amountConverted}`);
+        }
+        else if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'Euro (EUR)') {
+            let amount = await inquirer.prompt([{
+                    name: 'amount',
+                    type: 'input',
+                    message: 'Enter amount to convert: '
+                }]);
+            let amountConverted = amount.amount * 1.13;
+            console.log(`${amount.amount} GBP in EUR is: ${amountConverted}`);
         }
     }
 }
