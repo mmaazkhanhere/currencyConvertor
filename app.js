@@ -64,8 +64,8 @@ async function currencyChanging() {
             console.log(`${amount.amount} USD in EUR is: ${amountConverted}`);
         }
     }
-    else if (CurrencySelector == 'Pound (GBP)') {
-        if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'US Dollar (USD)') {
+    else if (CurrencySelector.CurrencySelector == 'Pound (GBP)') {
+        if (CurrencySelector.CurrencySelector == 'Pound (GBP)' && CurrencyChanger.CurrencyChanger == 'US Dollar (USD)') {
             let amount = await inquirer.prompt([{
                     name: 'amount',
                     type: 'input',
@@ -74,7 +74,7 @@ async function currencyChanging() {
             let amountConverted = amount.amount * 1.23;
             console.log(`${amount.amount} GBP in USD is: ${amountConverted}`);
         }
-        else if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'Pound (GBP)') {
+        else if (CurrencySelector.CurrencySelector == 'Pound (GBP)' && CurrencyChanger.CurrencyChanger == 'Pound (GBP)') {
             let amount = await inquirer.prompt([{
                     name: 'amount',
                     type: 'input',
@@ -83,7 +83,7 @@ async function currencyChanging() {
             let amountConverted = amount.amount * 1;
             console.log(`${amount.amount} GBP in GBP is: ${amountConverted}`);
         }
-        else if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'Riyal (SAR)') {
+        else if (CurrencySelector.CurrencySelector == 'Pound (GBP)' && CurrencyChanger.CurrencyChanger == 'Riyal (SAR)') {
             let amount = await inquirer.prompt([{
                     name: 'amount',
                     type: 'input',
@@ -92,7 +92,7 @@ async function currencyChanging() {
             let amountConverted = amount.amount * 4.60;
             console.log(`${amount.amount} GBP in SAR is: ${amountConverted}`);
         }
-        else if (CurrencySelector == 'Pound (GBP)' && CurrencyChanger == 'Euro (EUR)') {
+        else if (CurrencySelector.CurrencySelector == 'Pound (GBP)' && CurrencyChanger.CurrencyChanger == 'Euro (EUR)') {
             let amount = await inquirer.prompt([{
                     name: 'amount',
                     type: 'input',
